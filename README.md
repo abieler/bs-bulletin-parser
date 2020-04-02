@@ -28,14 +28,15 @@ which then prints the results on the screen
 ```
 >> WARNING:root:Error parsing: 61-jähriger
 
->> NUMCUL_CONF_RESIDENTS    : 691
->> NUMCUL_RELEASED          : 323
->> NUMCUL_HOSP_RESIDENTS    : 88
->> DAILY_DECEASED           : 2
->> NUMCUL_CONF              : 1095
->> NUMCUL_HOSP              : 108
->> NUMCUL_ICU               : 16
-
+>> NUMCUL_CONF_RESIDENTS         : 691
+>> NUMCUL_RELEASED               : 323
+>> DAILY_DECEASED                : 2
+>> NUMCUL_CONF                   : 1095
+>> NUMCUL_HOSP_RESIDENTS         : 88
+>> NUMCUL_HOSP                   : 108
+>> NUMCUL_ICU                    : 16
+>> NUMCUL_CONFIRMED_NON_RESIDENT : 404
+>> NINST_HOSP_NON_RESIDENT       : 20
 ```
 
 There is some basic text preprocessing where all german number words like "zwei", "hundert" etc. are replaced by their numerical values before actual parsing.
