@@ -39,3 +39,10 @@ which then prints the results on the screen
 There is some basic text preprocessing where all german number words like "zwei", "hundert" etc. are replaced by their numerical values before actual parsing.
 Some edge cases are also converted such as "ein", "eine", "einen" -> 1
 This works for all numbers up to 100 plus a few common cases such as "tausend"
+
+
+## Implementation Detail
+Parsing is performed by using a custom trained named-entity-recognition model in spacy. `(nlp/*)`
+
+Latest training data update: 2020-04-01
+
