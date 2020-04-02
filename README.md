@@ -1,6 +1,9 @@
 # bs-bulletin-parser
 
 Parses text of daily bulleting from Canton BS for covid19 data for the following data:
+
+https://www.gd.bs.ch/medienseite/medienmitteilungen.html
+
 ```
 NUMCUL_CONF_RESIDENTS
 DAILY_DECEASED
