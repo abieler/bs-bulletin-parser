@@ -30,6 +30,18 @@ def parse(text: str) -> dict:
     return result
 
 
+def update_indirect_numbers(result: dict) -> dict:
+    if result.get("NUMCUL_CONF", None) and result.get("NUMCUL_CONF_RESIDENTS"):
+        result["NCUMUL_CONFIRMED_NON_RESIDENT"] = result["NUMCUL_CONF"] - result["NUMCUL_CONF_RESIDENTS"]
+
+    if result.get("NUMCUL_HOSP", None) and result.get("NUMCUL_HOSP_RESIDENTS", None):
+        result["NINST_HOSP_NON_RESIDENT"] = result["NUMCUL_HOSP"] - result["NUMCUL_HOSP_RESIDENTS"]
+
+    return result
+
+
+
+
 with open("numbers.txt", "r") as txtfile:
     numbermapping = {l.strip(): str(i) for i, l in enumerate(txtfile.readlines())}
 numbermapping["hundert"] = "100"
@@ -49,5 +61,8 @@ if __name__ == "__main__":
         text = txtfile.read()
 
     ptext = preprocess(text)
-    for k, v in parse(ptext).items():
-        print(f"{k:25}: {v}")
+    result = parse(ptext)
+    result = update_indirect_numbers(result)
+
+    for k, v in result.items():
+        print(f"{k:30}: {v}")
