@@ -32,3 +32,7 @@ which then prints the results on the screen
 >> NUMCUL_ICU               : 16
 
 ```
+
+There is some basic text preprocessing where all german number words like "zwei", "hundert" etc. are replaced by their numerical values before actual parsing.
+Some edge cases are also converted such as "ein", "eine", "einen" -> 1
+This works for all numbers up to 100 plus a few common cases such as "tausend"
