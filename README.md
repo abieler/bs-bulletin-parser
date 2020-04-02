@@ -14,6 +14,8 @@ NUMCUL_CONF
 NUMCUL_HOSP
 NUMCUL_HOSP_RESIDENTS
 NUMCUL_ICU
+NUMCUL_CONFIRMED_NON_RESIDENT
+NUMCUL_CONF
 ```
 
 Copy daily bulletin text into an ascii file (or run example below) and run as follows:

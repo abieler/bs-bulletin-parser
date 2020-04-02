@@ -32,7 +32,7 @@ def parse(text: str) -> dict:
 
 def update_indirect_numbers(result: dict) -> dict:
     if result.get("NUMCUL_CONF", None) and result.get("NUMCUL_CONF_RESIDENTS"):
-        result["NCUMUL_CONFIRMED_NON_RESIDENT"] = result["NUMCUL_CONF"] - result["NUMCUL_CONF_RESIDENTS"]
+        result["NUMCUL_CONFIRMED_NON_RESIDENT"] = result["NUMCUL_CONF"] - result["NUMCUL_CONF_RESIDENTS"]
 
     if result.get("NUMCUL_HOSP", None) and result.get("NUMCUL_HOSP_RESIDENTS", None):
         result["NINST_HOSP_NON_RESIDENT"] = result["NUMCUL_HOSP"] - result["NUMCUL_HOSP_RESIDENTS"]
